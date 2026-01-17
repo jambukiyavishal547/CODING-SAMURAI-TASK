@@ -1,0 +1,156 @@
+/* ---------- Global Reset ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont;
+    background: linear-gradient(120deg, #667eea, #764ba2);
+}
+
+/* ---------- Centered Auth Pages (Login / Register) ---------- */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeSlide 0.6s ease;
+}
+
+.auth-card h3 {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.auth-card p.subtitle {
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.auth-card input {
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.auth-card button {
+    border-radius: 10px;
+    padding: 12px;
+    font-weight: 600;
+}
+
+/* ---------- Divider ---------- */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+.divider span {
+    padding: 0 10px;
+    font-size: 13px;
+    color: #6c757d;
+}
+
+/* ---------- Dashboard Layout ---------- */
+.page-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 15px;
+}
+
+.card {
+    border-radius: 16px;
+    border: none;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeSlide 0.4s ease;
+}
+
+.card h5 {
+    font-weight: 600;
+}
+
+/* ---------- Post Cards ---------- */
+.post-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    padding: 14px 20px;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background: linear-gradient(120deg, #667eea, #764ba2);
+    border: none;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-outline-dark:hover {
+    background: #212529;
+    color: #fff;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    margin-top: 50px;
+    opacity: 0.9;
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Responsive Tweaks ---------- */
+@media (max-width: 576px) {
+    .auth-card {
+        padding: 22px;
+    }
+}
